@@ -1,4 +1,10 @@
-import React from 'react'
+import React from 'react';
+
+import AboutPage from './../pages/AboutPage';
+import ContactPage from './../pages/ContactPage';
+import HomePage from './../pages/HomePage';
+import PortfolioPage from './../pages/PortfolioPage';
+import SkillsPage from './../pages/SkillsPage';
 
 
 function App() {
