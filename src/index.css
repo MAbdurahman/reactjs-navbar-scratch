@@ -39,14 +39,15 @@
 
 
   --font-brand: 'Caveat',
-  cursive;
+    cursive;
   --font-heading: 'Lora',
-  serif;
+    serif;
   --font-body: 'Roboto',
-  sans-serif;
+    sans-serif;
 
   --cubic-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 html {
   height: 100vh;
   min-height: 100vh;
@@ -64,50 +65,81 @@ body {
 #navbar.navbar {
   position: fixed;
   left: 0;
+  right: 0;
   top: 0;
   width: 100%;
-  height: 75px;
+  height: 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 2em;
+  font-size: 1.2rem;
   background-color: var(--clr-darkest-blue);
   color: var(--clr-lighter-blue);
 }
-#navbar .navbar-brand-logo {
-  width: 33.3%;
+
+#navbar .navbar-brand {
+  justify-self: start;
   font-family: var(--font-heading);
   font-size: 1.2rem;
+  margin-left: 5em;
   letter-spacing: 1px;
 
 }
-#navbar .navbar-brand-logo:hover {
+
+#navbar .navbar-brand:hover {
   cursor: pointer;
 }
 
+#navbar div.navbar-burger-container {
+  display: none;
+}
 
-#navbar .navbar-links-list {
-  width: 66.6%;
-  display: flex;
-  flex-direction: row;
+#navbar ul.navbar-links-list {
+  width: 70vw;
+  margin-right: 5em;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
   list-style: none;
+  text-align: center;
+  justify-content: end;
 
 }
 
-#navbar .navbar-links-items {
-    display: flex;
-    justify-content: flex-end;
-  margin: 0  .625em;
-  padding: .625em 1.25em;
-  font-size: 1.25rem;
+#navbar li.navbar-links-item {
+  margin-right: 2em;
+  color: var(--clr-lighter-blue);
 
 }
-#navbar .navbar-links-link {
-    text-decoration: none;
-    color: var(--clr-lighter-blue);
+
+#navbar li.navbar-links-item:nth-child(5) {
+  margin-right: 0;
 }
 
-#navbar .navbar-links-link {
+#navbar a.navbar-links-link {
+  position: relative;
   letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--clr-lighter-blue);
+}
+
+#navbar a.navbar-links-link::before {
+  content: '';
+  position: absolute;
+  bottom: -.5em;
+  left: 0;
+  right: 0;
+  /* display: block; */
+  height: 3px;
+  background: var(--clr-light-blue);
+  transform: scale(0, 1);
+  transition: transform 0.5s var(--cubic-timing);
+}
+
+#navbar a.navbar-links-link:hover::before {
+  transform: scale(1, 1);
 }
 
 /*======================================================
@@ -117,12 +149,15 @@ body {
   height: 700px;
   padding-top: 4em;
 }
+
 .pages:nth-child(1) {
   padding-top: 5.5em;
 }
+
 .pages h1 {
   text-align: center;
 }
+
 .pages h1:nth-child(1) {
   margin-top: 2em;
 }

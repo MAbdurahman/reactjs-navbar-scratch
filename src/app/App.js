@@ -6,8 +6,6 @@ import HomePage from './../pages/HomePage';
 import PortfolioPage from './../pages/PortfolioPage';
 import SkillsPage from './../pages/SkillsPage';
 
-
-
 function App() {
 	return (
 		<div>
