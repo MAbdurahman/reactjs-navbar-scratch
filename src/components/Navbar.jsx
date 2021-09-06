@@ -4,6 +4,7 @@ import Hamburger from 'hamburger-react';
 export default function Navbar() {
 	//**************** variables ****************//
 	const [isOpen, setOpen] = useState(false);
+
 	//**************** functions ****************//
 	const handleClick = () => {
 		setOpen(!isOpen);
@@ -15,7 +16,9 @@ export default function Navbar() {
 	return (
 		<nav id='navbar' className='navbar'>
 			<div className='navbar-brand' onClick={closeMenu}>
-				Andre Romanovich
+				<a className='navbar-brand-link' href='#homePage'>
+					Andre Romanovich
+				</a>
 			</div>
 			<div className='navbar-burger-container' onClick={handleClick}>
 				<Hamburger
@@ -26,6 +29,7 @@ export default function Navbar() {
 			</div>
 
 			<ul
+				id='navbar-links-list'
 				className={
 					isOpen ? 'navbar-links-list active' : 'navbar-links-list'
 				}
@@ -33,7 +37,7 @@ export default function Navbar() {
 				<li className='navbar-links-item'>
 					<a
 						href='#homePage'
-						className='navbar-links-link'
+						className='navbar-links-link active'
 						onClick={closeMenu}
 					>
 						Home
