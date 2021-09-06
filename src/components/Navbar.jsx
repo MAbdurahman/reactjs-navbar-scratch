@@ -7,7 +7,7 @@ export default function Navbar() {
 	return (
 		<nav id='navbar' className='navbar'>
 			<div className='navbar-brand'>
-				<h3 className='navbar-brand-logo'>Logo</h3>
+				<h3 className='navbar-brand-logo'>Andre Romanovich</h3>
 			</div>
       
 			<div className='navbar-links'>
