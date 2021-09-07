@@ -5,6 +5,7 @@ import ContactPage from './../pages/ContactPage';
 import HomePage from './../pages/HomePage';
 import PortfolioPage from './../pages/PortfolioPage';
 import SkillsPage from './../pages/SkillsPage';
+import Footer from './../components/Footer';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<SkillsPage />
 			<PortfolioPage />
 			<ContactPage />
+			<Footer />
 		</div>
 	);
 }

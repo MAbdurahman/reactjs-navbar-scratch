@@ -59,10 +59,14 @@ html {
 }
 
 body {
-  height: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
   padding: var(--nav-height);
+  padding-bottom: 400px;
   font-family: var(--font-body);
   background-color: var(--clr-lighter-blue);
+  overflow-x: hidden;
 }
 
 /*======================================================
@@ -178,6 +182,7 @@ body {
   #navbar div.navbar-brand {
     margin-left: 1em;
   }
+
 }
 
 #navbar ul.navbar-links-list {
@@ -195,7 +200,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     position: absolute;
     top: var(--nav-height);
     left: -100%;
@@ -240,4 +245,75 @@ body {
 div#contactPage.pages {
   padding-top: var(--nav-height);
 
+}
+
+/*tablet landscape and desktop layout (960px or more) */
+@media only screen and (min-width: 960px) {
+  /*...tablet landscape and desktop styles */
+}
+
+/*table portrait layout (768px to 959px) */
+@media only screen and (max-width: 1024px) {
+  /*... tablet portrait styles */
+  div#contactPage.pages {
+    padding-top: 2em;
+  }
+  div#skillsPage,
+  div#aboutPage,
+  div#portfolioPage,
+  div#contactPage {
+    height: 900px;
+  }
+}
+
+/*mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+  /*...mobile landscape styles */
+}
+
+/*mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
+  /*...mobile portrait styles */
+}
+
+/*======================================================
+              component/Footer
+=========================================================*/
+#footer {
+  margin-bottom: 3em;
+  padding-bottom: 3em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 400px;
+    letter-spacing: 1px;
+    background-color: #333030;
+    color:#edeef4;
+}
+
+/*tablet landscape and desktop layout (960px or more) */
+@media only screen and (min-width: 1025px) {
+  /*...tablet landscape and desktop styles */
+
+}
+
+/*table portrait layout (768px to 959px) */
+@media only screen and (max-width: 1024px) {
+  /*... tablet portrait styles */
+    #footer {
+      margin-bottom: 3em;
+      padding-bottom: 3em;
+    }
+}
+
+/*mobile landscape layout (480px to 767px) */
+@media only screen and (max-width: 767px) {
+  /*...mobile landscape styles */
+}
+
+/*mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
+  /*...mobile portrait styles */
 }
