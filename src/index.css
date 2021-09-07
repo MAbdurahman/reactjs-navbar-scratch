@@ -149,7 +149,7 @@ body {
 }
 
 #navbar li.navbar-links-item:nth-child(5) {
-  margin-right: 0;
+  margin-right: .3em;
 }
 
 #navbar a.navbar-links-link {
