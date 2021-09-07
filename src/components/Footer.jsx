@@ -13,11 +13,11 @@ export default function Footer() {
 							</a>
 						</Navbar.Brand>
 						<p className='pr-5 mission-statement'>
-							"I put my heart and soul into my work. The needs of my
+							"I put my heart and soul into my work! The needs of my
 							clients are at the forefront of what I do everyday. Through
 							programming, engineering, art, research, and innovation, I
 							develop software and websites that are artistic,
-							functional, and user friendly; which evolve with my client
+							functional, and user friendly; which evolve with my client's
 							business needs."
 						</p>
 						<p className='social-icons'>

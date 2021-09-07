@@ -77,12 +77,14 @@ body {
   left: 0;
   right: 0;
   top: 0;
+  bottom: 0;
   width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  /* padding: 0 2em; */
+
   font-size: 1.2rem;
   background-color: var(--clr-darkest-blue);
   color: var(--clr-lighter-blue);
@@ -91,9 +93,11 @@ body {
 
 #navbar div.navbar-brand {
   justify-self: start;
+  align-self: center;
   font-family: var(--font-heading);
   font-size: 1.2rem;
   margin-left: 5em;
+  margin-bottom: 1.5em;
   letter-spacing: 1px;
   color: var(--clr-light-blue);
   transition: transform 0.5s var(--cubic-timing),
@@ -128,15 +132,17 @@ body {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: 1fr;
-  grid-gap: 10px;
+  /* grid-gap: 10px; */
   list-style: none;
   text-align: center;
   justify-content: end;
-  align-items: center;
+  align-content: center !important;
 
 }
 
+
 #navbar li.navbar-links-item {
+  margin-top: 1em;
   margin-right: 2em;
   color: var(--clr-lighter-blue);
 
@@ -187,10 +193,6 @@ body {
 
 }
 
-#navbar ul.navbar-links-list {
-  margin-right: 1em;
-}
-
 /*mobile landscape layout (480px to 768px) */
 @media only screen and (max-width: 768px) {
 
@@ -209,22 +211,26 @@ body {
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease-in-out;
+    z-index: 99;
+  }
+
+
+  #navbar ul.navbar-links-list.active {
+    left: 0;
+    background: var(--clr-darkest-blue);
+
+  }
+
+  #navbar li.navbar-links-item:nth-child(5) {
+    margin-right: 2em;
+  }
+
+  #navbar li.navbar-links-item {
+    margin-top: 2em;
   }
 }
 
-#navbar ul.navbar-links-list.active {
-  left: 0;
-  background: var(--clr-darkest-blue);
 
-}
-
-#navbar li.navbar-links-item:nth-child(5) {
-  margin-right: 2em;
-}
-
-#navbar li.navbar-links-item {
-  margin-top: 2em;
-}
 
 /*mobile portrait layout (479px or less) */
 @media only screen and (max-width: 479px) {
@@ -263,7 +269,7 @@ div#contactPage.pages {
 
   /*... tablet portrait styles */
   div#contactPage.pages {
-    padding-top: 2em;
+    padding-top: 3em;
   }
 
   div#skillsPage,
@@ -385,6 +391,11 @@ footer {
   text-decoration: underline;
 }
 
+#footer h4.about-links-heading,
+#footer h4.about-location-address {
+  color: var(--clr-light-blue);
+}
+
 #footer .footer-horizontal-line {
   background-color: #8DA9C4;
 }
@@ -406,11 +417,25 @@ footer {
 }
 
 /*mobile landscape layout (480px to 767px) */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   /*...mobile landscape styles */
+  #footer {
+    height: 640px;;
+    margin-bottom: 0;
+  }
 }
 
 /*mobile portrait layout (479px or less) */
 @media only screen and (max-width: 479px) {
   /*...mobile portrait styles */
+  #footer {
+    height: 750px;
+    min-height: 750px;
+    max-height: 150vh;
+    padding-bottom: 3.5em;
+    margin-bottom: auto;
+  }
+}
+@media only screen and (max-width: 375px) {
+  
 }
