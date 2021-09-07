@@ -106,11 +106,13 @@ body {
   color: var(--clr-lighter-blue);
   transform: scale(1.025);
 }
-#navbar a.navbar-brand-link { 
+
+#navbar a.navbar-brand-link {
   text-decoration: none;
   color: var(--clr-light-blue);
   transition: color 0.5s var(--cubic-timing);
 }
+
 #navbar a.navbar-brand-link:hover {
   color: var(--clr-lighter-blue);
 }
@@ -196,6 +198,7 @@ body {
   #navbar div.navbar-burger-container {
     display: contents;
   }
+
   #navbar ul.navbar-links-list {
     display: flex;
     flex-direction: column;
@@ -208,6 +211,7 @@ body {
     transition: all 0.5s ease-in-out;
   }
 }
+
 #navbar ul.navbar-links-list.active {
   left: 0;
   background: var(--clr-darkest-blue);
@@ -217,9 +221,11 @@ body {
 #navbar li.navbar-links-item:nth-child(5) {
   margin-right: 2em;
 }
+
 #navbar li.navbar-links-item {
   margin-top: 2em;
 }
+
 /*mobile portrait layout (479px or less) */
 @media only screen and (max-width: 479px) {
   /*...mobile portrait styles */
@@ -254,10 +260,12 @@ div#contactPage.pages {
 
 /*table portrait layout (768px to 959px) */
 @media only screen and (max-width: 1024px) {
+
   /*... tablet portrait styles */
   div#contactPage.pages {
     padding-top: 2em;
   }
+
   div#skillsPage,
   div#aboutPage,
   div#portfolioPage,
@@ -279,18 +287,106 @@ div#contactPage.pages {
 /*======================================================
               component/Footer
 =========================================================*/
+footer {
+  width: 100%;
+  height: fit-content;
+  margin-top: auto;
+}
+
 #footer {
-  margin-bottom: 3em;
-  padding-bottom: 3em;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-width: 100%;
-    height: 400px;
-    letter-spacing: 1px;
-    background-color: #333030;
-    color:#edeef4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 400px;
+  letter-spacing: 1px;
+  background-color: #333030;
+  color: #edeef4;
+}
+
+#footer span.navbar-brand a {
+  display: block;
+  height: 20px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  color: var(--clr-light-blue);
+  transition: transform 0.5s var(--cubic-timing),
+    color 0.5s var(--cubic-timing);
+}
+
+#footer span.navbar-brand a:hover {
+  cursor: pointer;
+  color: var(--clr-lighter-blue);
+  transform: scale(1.0125);
+}
+
+#footer p.mission-statement {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+#footer p.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+  color: var(--clr-lighter-blue);
+
+}
+
+#footer a.social-icon.facebook,
+#footer a.social-icon.twitter,
+#footer a.social-icon.github {
+  margin-right: 1em;
+  font-size: 1.7rem;
+  color: var(--footer-color);
+  cursor: pointer;
+  transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+#footer a.social-icon.facebook:hover {
+  color: #536fac !important;
+}
+
+#footer .social-icon.twitter:hover {
+  color: #58bde9 !important;
+}
+
+#footer .social-icon.github:hover {
+  color: #b3aeaa !important;
+}
+
+#footer .link-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .link-list {
+  list-style-type: none;
+}
+
+#footer .link a {
+  color: var(--clr-lighter-blue);
+  transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#footer .link a:hover {
+  color: var(--clr-light-blue);
+  text-decoration: underline;
+}
+
+#footer .footer-horizontal-line {
+  background-color: #8DA9C4;
 }
 
 /*tablet landscape and desktop layout (960px or more) */
@@ -301,11 +397,12 @@ div#contactPage.pages {
 
 /*table portrait layout (768px to 959px) */
 @media only screen and (max-width: 1024px) {
+
   /*... tablet portrait styles */
-    #footer {
-      margin-bottom: 3em;
-      padding-bottom: 3em;
-    }
+  #footer {
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+  }
 }
 
 /*mobile landscape layout (480px to 767px) */
