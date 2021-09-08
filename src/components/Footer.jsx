@@ -27,7 +27,7 @@ export default function Footer() {
 								className='social-icon facebook'
 								rel='noreferrer'
 							>
-								<i class='fab fa-facebook-square'></i>
+								<i className='fab fa-facebook-square'></i>
 							</a>
 							<a
 								href='https://twitter.com/'
@@ -35,7 +35,7 @@ export default function Footer() {
 								className='social-icon twitter'
 								rel='noreferrer'
 							>
-								<i class='fab fa-twitter-square'></i>
+								<i className='fab fa-twitter-square'></i>
 							</a>
 							<a
 								href='https://github.com/MAbdurahman'
@@ -43,7 +43,7 @@ export default function Footer() {
 								className='social-icon github'
 								rel='noreferrer'
 							>
-								<i class='fab fa-github-square'></i>
+								<i className='fab fa-github-square'></i>
 							</a>
 						</p>
 					</div>
@@ -81,11 +81,11 @@ export default function Footer() {
 							Work-hours: 9:00am - 12:00am
 						</p>
 						<p className='about-location-item mb-1 link'>
-							<i class='fas fa-phone-alt'></i>&nbsp;
+							<i className='fas fa-phone-alt'></i>&nbsp;
 							<a href='tel:901-425-5525'>123-456-7890</a>
 						</p>
 						<p className='about-location-item mb-2 link'>
-							<i class='fas fa-envelope-open-text'></i>&nbsp;
+							<i className='fas fa-envelope-open-text'></i>&nbsp;
 							<a
 								href='mailto:mdbdrrhm2@gmail.com'
 								target='_blank'
