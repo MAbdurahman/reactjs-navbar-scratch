@@ -1,4 +1,5 @@
 import React from 'react';
+import Preloader from './../components/Preloader';
 import Navbar from './../components/Navbar';
 import AboutPage from './../pages/AboutPage';
 import ContactPage from './../pages/ContactPage';
@@ -10,6 +11,7 @@ import Footer from './../components/Footer';
 function App() {
 	return (
 		<div>
+			<Preloader />
 			<Navbar />
 			<HomePage />
 			<AboutPage />
