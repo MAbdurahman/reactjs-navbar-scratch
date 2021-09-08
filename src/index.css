@@ -35,6 +35,13 @@
   --clr-light-blue: #8DA9C4;
   --clr-lighter-blue: #edeef4;
 
+  --clr-accent-gold: #f5be1a;
+  --clr-accent-blue: #8dc8cf;
+  --clr-background: rgb(238, 236, 236);
+
+
+  --cubic-timing-1: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
   --shadow: -2px 2px 8px rgba(0, 0, 0, .8);
 
 
@@ -69,6 +76,7 @@ body {
   background-color: var(--clr-lighter-blue);
   overflow-x: hidden;
 }
+
 /*tablet landscape and desktop layout (960px or more) */
 @media only screen and (min-width: 960px) {
   /*...tablet landscape and desktop styles */
@@ -368,11 +376,12 @@ footer {
   font-size: .75rem;
   letter-spacing: 1px;
 }
+
 #footer p.social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
   color: var(--clr-lighter-blue);
 
 }
@@ -432,6 +441,7 @@ footer {
 #footer h4.about-location-address {
   color: var(--clr-light-blue);
 }
+
 #footer p.about-location-address,
 #footer p.about-location-item {
   font-size: .875rem;
@@ -444,9 +454,11 @@ footer {
 #footer p.copyright-item a {
   font-size: .7rem;
 }
+
 #footer p.copyright-item {
   font-size: .8rem;
 }
+
 /*tablet landscape and desktop layout (960px or more) */
 @media only screen and (min-width: 1025px) {
   /*...tablet landscape and desktop styles */
@@ -465,6 +477,7 @@ footer {
 
 /*mobile landscape layout (480px to 767px) */
 @media only screen and (max-width: 768px) {
+
   /*...mobile landscape styles */
   #footer {
     height: 570px;
@@ -474,6 +487,7 @@ footer {
 
 /*mobile portrait layout (479px or less) */
 @media only screen and (max-width: 479px) {
+
   /*...mobile portrait styles */
   #footer {
     height: 750px;
@@ -483,9 +497,8 @@ footer {
     margin-bottom: auto;
   }
 }
-@media only screen and (max-width: 375px) {
-  
-}
+
+@media only screen and (max-width: 375px) {}
 
 /*======================================================
               pages/AboutPage
@@ -508,11 +521,11 @@ div#homePage.header.pages {
   padding: 0;
   display: flex;
   align-items: center;
-  background-color: goldenrod;
   background: url('./img/home_page/pexels-pixabay-270348.jpg');
   background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   z-index: -6;
 }
 
@@ -526,6 +539,47 @@ div#homePage.header.pages {
   background: rgba(14, 13, 13, 0.8);
   z-index: -5;
 }
+
+/*------header-content-----*/
+#header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#header-content--inner {
+  display: block;
+
+}
+
+#header-heading h1 {
+  display: block;
+  /* color: var(--white); */
+  color: var(--clr-lighter-blue);
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+#header-heading--sub h3 {
+  display: block;
+  margin-bottom: 1em;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+  color: var(--clr-accent-gold);
+  opacity: 0.8;
+}
+
 /*======================================================
               pages/PortfolioPage
 =========================================================*/
