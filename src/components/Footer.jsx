@@ -17,8 +17,8 @@ export default function Footer() {
 							clients are at the forefront of what I do everyday. Through
 							programming, engineering, art, research, and innovation, I
 							develop software and websites that are artistic,
-							functional, and user friendly; which evolve with my client's
-							business needs."
+							functional, and user friendly; which evolve with my
+							client's business needs."
 						</p>
 						<p className='social-icons'>
 							<a
@@ -38,7 +38,7 @@ export default function Footer() {
 								<i class='fab fa-twitter-square'></i>
 							</a>
 							<a
-								href='https://github.com/'
+								href='https://github.com/MAbdurahman'
 								target='_blank'
 								className='social-icon github'
 								rel='noreferrer'
@@ -70,7 +70,7 @@ export default function Footer() {
 						</div>
 					</div>
 					<div className='col-lg-4 col-xs-12 about-location mt-lg-3'>
-						<h4 className='about-location-address'>Location</h4>
+						<h4 className='about-location-address'>Information</h4>
 						<p className='about-location-address mb-0'>
 							1234 SomeStreet Avenue #100
 						</p>
