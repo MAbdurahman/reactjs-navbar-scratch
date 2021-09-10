@@ -44,12 +44,9 @@
 
   --shadow: -2px 2px 8px rgba(0, 0, 0, .8);
 
-  --font-brand: 'Caveat',
-    cursive;
-  --font-heading: 'Lora',
-    serif;
-  --font-body: 'Roboto',
-    sans-serif;
+  --font-brand: 'Lora', serif;
+  --font-heading: 'Lora', serif;
+  --font-body: 'Roboto', sans-serif;
 
   --cubic-timing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   --nav-height: 80px;
@@ -104,7 +101,7 @@ body {
   z-index: 1;
   display: block;
   min-width: 150px;
-  max-width: 250px;
+  max-width: 200px;
   margin: 0 .375em;
   padding: 12px 46px;
   font-family: var(--font-body);
@@ -169,7 +166,8 @@ body {
   transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.btn-home:hover::before {
+.btn-home:hover::before,
+.btn-home:focus::before {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -200,7 +198,6 @@ body {
   z-index: 10000;
 }
 
-
 /*======================================================
                 component/Navbar
 =========================================================*/
@@ -210,6 +207,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
+  z-index: 999;
   width: 100%;
   height: 80px;
   display: flex;
@@ -264,14 +262,12 @@ body {
   display: grid;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: 1fr;
-  /* grid-gap: 10px; */
   list-style: none;
   text-align: center;
   justify-content: end;
   align-content: center !important;
 
 }
-
 
 #navbar li.navbar-links-item {
   margin-top: 1em;
@@ -442,18 +438,19 @@ footer {
   color: #edeef4;
 }
 
-#footer span.navbar-brand a {
+#footer .navbar-brand a {
   display: block;
   height: 20px;
   text-decoration: none;
   font-family: var(--font-heading);
+  font-size: .9rem;
   letter-spacing: 1px;
   color: var(--clr-light-blue);
   transition: transform 0.5s var(--cubic-timing),
     color 0.5s var(--cubic-timing);
 }
 
-#footer span.navbar-brand a:hover {
+#footer .navbar-brand a:hover {
   cursor: pointer;
   color: var(--clr-lighter-blue);
   transform: scale(1.0125);
@@ -477,7 +474,7 @@ footer {
 #footer a.social-icon.codepen,
 #footer a.social-icon.github {
   margin-right: 1em;
-  font-size: 1.7rem;
+  font-size: 1rem;
   color: var(--footer-color);
   cursor: pointer;
   transition: color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -526,6 +523,7 @@ footer {
 
 #footer h4.about-links-heading,
 #footer h4.about-location-address {
+  font-size: 1rem;
   color: var(--clr-light-blue);
 }
 
@@ -667,11 +665,12 @@ margin-top: 1em;
 /*======================================================
               pages/HomePage
 =========================================================*/
-div#homePage.header.pages {
-  position: absolute;
+div#homePage.header {
+/*   position: absolute; */
+  position: relative;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: calc(100vh - 80px);
   width: 100vw;
   padding: 0;
   display: flex;
@@ -696,9 +695,11 @@ div#homePage.header.pages {
 }
 
 /*------header-content-----*/
-#header-content {
+#homePage #header-content {
+  position: relative;
   width: 100%;
   height: 100%;
+  padding-top: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -708,14 +709,15 @@ div#homePage.header.pages {
 
 #header-content--inner {
   display: block;
-
+  width: 100%;
+  height: 100%;
 }
 
 #header-heading h1 {
   display: block;
   color: var(--clr-lighter-blue);
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -728,17 +730,21 @@ div#homePage.header.pages {
   margin-bottom: 1em;
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   letter-spacing: 3px;
   color: var(--clr-accent-gold);
   opacity: 0.8;
 }
 
-#header #header-heading--btn {
+#homePage #header-heading--btn a {
   text-decoration: none;
 }
 
-#header #header--btn {
+#homePage #heading--btn {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -757,7 +763,6 @@ div#homePage.header.pages {
   width: 32px;
   height: 32px;
   color: var(--clr-lighter-blue);
-  color: var(--clr-light-blue);
   font-size: 3rem;
   text-align: center;
   cursor: pointer;
@@ -839,6 +844,11 @@ div#homePage.header.pages {
     transform: translate(0);
   }
 }
+
+/* ======================================================
+              Keyframes - moveFromLeft
+========================================================= */
+
 
 /* ======================================================
               Keyframes - bounce

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HomePage() {
 	return (
-		<div id='homePage' className='header pages scrollspy'>
+		<header id='homePage' className='header container-fluid scrollspy'>
 			<div className='header_overlay'></div>
 			<div id='header-content'>
 				<div id='header-content--inner' className='text-center'>
@@ -17,19 +17,19 @@ export default function HomePage() {
 						<a
 							href='#aboutPage'
 							id='heading--btn'
-							className='btn-general bg-1 button--special button--border-thin button--text-thick'
+							className='btn-default btn-home'
 							role='button'
 						>
 							View More
 						</a>
 					</div>
+				</div>
 					<div id='arrow-content'>
 						<a href='#aboutPage' id='arrow-down'>
 							<i className='fas fa-chevron-down'></i>
 						</a>
 					</div>
-				</div>
 			</div>
-		</div>
+		</header>
 	);
 }
