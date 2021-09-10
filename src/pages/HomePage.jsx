@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function HomePage() {
 	return (
-		<header id='homePage' className='header container-fluid scrollspy'>
+		<header id='homePage' className='header scrollspy'>
+			<div className="header_background"></div>
 			<div className='header_overlay'></div>
 			<div id='header-content'>
 				<div id='header-content--inner' className='text-center'>

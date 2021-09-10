@@ -110,7 +110,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  background-color: none;
+  background-color: transparent;
   border: 2px solid white;
   border-radius: 3px;
   backface-visibility: hidden;
@@ -225,7 +225,7 @@ body {
   justify-self: start;
   align-self: center;
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-left: 5em;
   margin-bottom: 1.5em;
   letter-spacing: 1px;
@@ -614,8 +614,9 @@ footer {
 }
 
 #aboutPage .about-info {
-margin-top: 1em;
+  margin-top: 1em;
 }
+
 #aboutPage .about-info-title {
   text-align: center;
 }
@@ -665,22 +666,34 @@ margin-top: 1em;
 /*======================================================
               pages/HomePage
 =========================================================*/
-div#homePage.header {
-/*   position: absolute; */
+header#homePage .header {
+  position: absolute;
   position: relative;
   top: 0;
   left: 0;
   height: calc(100vh - 80px);
+  /* height: fit-content; */
   width: 100vw;
   padding: 0;
+  padding-bottom: 2em;
   display: flex;
   align-items: center;
-  background: url('./img/home_page/pexels-pixabay-270348.jpg');
+
+}
+
+#homePage .header_background {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url('./img/home_page/pexels-pixabay-270348.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   z-index: -6;
+
 }
 
 /*-----header image overlay-----*/
@@ -690,8 +703,9 @@ div#homePage.header {
   left: 0;
   width: 100%;
   height: calc(100vh - 80px);
-  background: rgba(14, 13, 13, 0.8);
+  background: rgba(36, 34, 34, 0.8);
   z-index: -5;
+
 }
 
 /*------header-content-----*/
@@ -699,7 +713,7 @@ div#homePage.header {
   position: relative;
   width: 100%;
   height: 100%;
-  padding-top: 80px;
+  padding-top: 9em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -723,6 +737,9 @@ div#homePage.header {
   letter-spacing: 3px;
   margin: 0;
   opacity: 0.8;
+  animation-name: moveFromLeft;
+  animation-duration: 2.2s;
+  animation-delay: 0.8s;
 }
 
 #header-heading--sub h3 {
@@ -734,6 +751,9 @@ div#homePage.header {
   letter-spacing: 3px;
   color: var(--clr-accent-gold);
   opacity: 0.8;
+  animation-name: moveFromRight;
+  animation-duration: 2.2s;
+  animation-delay:0.8s;
 }
 
 #homePage #header-heading--btn a {
@@ -747,6 +767,10 @@ div#homePage.header {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
+  animation-name: moveFromBottom;
+  animation-duration: 1.5s;
+  animation-delay: 0.8s;
 }
 
 #arrow-content {
@@ -759,7 +783,7 @@ div#homePage.header {
   position: absolute;
   left: 50%;
   bottom: -70px;
-  margin-left: -16px; 
+  margin-left: -16px;
   width: 32px;
   height: 32px;
   color: var(--clr-lighter-blue);
@@ -848,7 +872,86 @@ div#homePage.header {
 /* ======================================================
               Keyframes - moveFromLeft
 ========================================================= */
+@-webkit-keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+  }
 
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-10rem);
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+/* ======================================================
+              Keyframes - moveFromBottom
+========================================================= */
+@-webkit-keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+  }
+
+  80% {
+    opacity: 0.8;
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+  }
+
+  80% {
+    opacity: 0;
+    -webkit-transform: translateY(1rem);
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
 
 /* ======================================================
               Keyframes - bounce
