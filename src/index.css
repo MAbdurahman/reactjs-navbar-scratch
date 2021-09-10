@@ -110,12 +110,12 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: 2px solid;
   border-radius: 3px;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  transition: color .4s, border-color 4s;
+  transition: color .4s, border-color .4s;
 }
 
 .btn-default:focus,
@@ -178,17 +178,15 @@ body {
 
 .btn-blue {
     background-color: transparent;
+    background-color: var(--clr-darker-blue);
     border: 2px solid var(--clr-darker-blue);
     border-radius: 3px;
 }
 .btn-blue:focus,
 .btn-blue:hover {
   color: var(--clr-darker-blue);
+  /* color: var(--clr-lighter-blue); */
   border-color: var(--clr-darker-blue);
-}
-
-.btn-blue:hover {
-  color: var(--clr-lighter-blue);
   border-color: var(--clr-lighter-blue);
 }
 
@@ -201,7 +199,10 @@ body {
   height: 100%;
   z-index: -1;
   background: var(--clr-darker-blue);
+  background: var(--clr-light-blue);
   border-color: var(--clr-darker-blue);
+  border-color: var(--clr-light-blue);
+
   opacity: 0;
   -webkit-transform: scale3d(0.7, 1, 1);
   transform: scale3d(0.7, 1, 1);
@@ -294,8 +295,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 2em; */
-
   font-size: 1.2rem;
   background-color: var(--clr-darkest-blue);
   color: var(--clr-lighter-blue);
@@ -671,13 +670,16 @@ footer {
 =========================================================*/
 #aboutPage {
   position: relative;
+  top: 0;
+  left: 0;
   height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 18em;
+  /* margin-top: 18em; */
+  /* margin-top: 5em; */
+  margin-top: 21em;
   margin-bottom: 3em;
-
 
   background-color: var(--clr-background);
 
@@ -687,6 +689,9 @@ footer {
 
 /* #aboutPage.about-row {
   background-color: var(--clr-background) !important;
+} */
+/* #aboutPage .about-row {
+  margin-top: 8em;
 } */
 
 #aboutPage img {
@@ -762,18 +767,21 @@ footer {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: capitalize;
-  color: var(--clr-darker-blue);
+  color: var(--clr-lighter-blue);
   background-color: transparent;
+    background-color: var(--clr-darker-blue);
   border: 2px solid var(--clr-darker-blue);
   margin-right: 1rem;
   cursor: pointer;
   box-shadow: 8px 13px 21px 3px rgba(98, 98, 98, 1);
   box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+  
 }
 .about__info--single-link:hover,
 .about__info--single-link:focus {
-  border: 2px solid var(--clr-darker-blue);
-  color: var(--clr-lighter-blue);
+  border: 2px solid var(--clr-light-blue);
+  color: var(--clr-darkest-blue);
+
 }
 
 /*======================================================
@@ -784,13 +792,15 @@ footer {
               pages/HomePage
 =========================================================*/
 header#homePage .header {
-  position: absolute;
+  /* position: absolute; */
   position: relative;
-  top: 0;
+  top: 80px;
   left: 0;
   height: calc(100vh - 80px);
   /* height: fit-content; */
+  height: 100vh;
   width: 100vw;
+  margin-top: 5em;
   padding: 0;
   padding-bottom: 2em;
   display: flex;
