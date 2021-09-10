@@ -9,7 +9,7 @@ export default function Footer() {
 					<div className='col-lg-5 col-xs-12 about-company mt-lg-3'>
 						<Navbar.Brand className='navbar-brand'>
 							<a href='#homePage' className='footer-navbar-brand'>
-								Andre Romanovich
+								Mahdi Abdurrahman
 							</a>
 						</Navbar.Brand>
 						<p className='pr-5 mission-statement'>
@@ -22,20 +22,12 @@ export default function Footer() {
 						</p>
 						<p className='social-icons'>
 							<a
-								href='https://www.facebook.com'
+								href='https://www.linkedin.com/'
 								target='_blank'
-								className='social-icon facebook'
+								className='social-icon linkedin'
 								rel='noreferrer'
 							>
-								<i className='fab fa-facebook-square'></i>
-							</a>
-							<a
-								href='https://twitter.com/'
-								target='_blank'
-								className='social-icon twitter'
-								rel='noreferrer'
-							>
-								<i className='fab fa-twitter-square'></i>
+								<i class='fab fa-linkedin'></i>
 							</a>
 							<a
 								href='https://github.com/MAbdurahman'
@@ -44,6 +36,14 @@ export default function Footer() {
 								rel='noreferrer'
 							>
 								<i className='fab fa-github-square'></i>
+							</a>
+							<a
+								href='https://codepen.io/MAbdurrahman/'
+								target='_blank'
+								className='social-icon codepen'
+								rel='noreferrer'
+							>
+								<i class='fab fa-codepen'></i>
 							</a>
 						</p>
 					</div>
@@ -82,7 +82,7 @@ export default function Footer() {
 						</p>
 						<p className='about-location-item mb-1 link'>
 							<i className='fas fa-phone-alt'></i>&nbsp;
-							<a href='tel:901-425-5525'>123-456-7890</a>
+							<a href='tel:901-425-5525'>901.425.5525</a>
 						</p>
 						<p className='about-location-item mb-2 link'>
 							<i className='fas fa-envelope-open-text'></i>&nbsp;
@@ -91,7 +91,7 @@ export default function Footer() {
 								target='_blank'
 								rel='noreferrer'
 							>
-								andre_romanovich@gmail.com
+								mahdi_abdurrahman@gmail.com
 							</a>
 						</p>
 					</div>
@@ -111,7 +111,7 @@ export default function Footer() {
 								<br />
 							</small>
 							<small className='copyright-text'>
-								&copy;&nbsp;2013 - 2021 Andre Romanovich, All rights
+								&copy;&nbsp;2013 - 2021 Mahdi Abdurrahman, All rights
 								reserved
 							</small>
 						</p>

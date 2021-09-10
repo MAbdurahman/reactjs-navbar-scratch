@@ -17,7 +17,7 @@ export default function Navbar() {
 		<nav id='navbar' className='navbar'>
 			<div className='navbar-brand' onClick={closeMenu}>
 				<a className='navbar-brand-link' href='#homePage'>
-					Andre Romanovich
+					Mahdi Abdurrahman
 				</a>
 			</div>
 			<div className='navbar-burger-container' onClick={handleClick}>

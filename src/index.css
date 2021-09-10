@@ -44,9 +44,6 @@
 
   --shadow: -2px 2px 8px rgba(0, 0, 0, .8);
 
-
-
-
   --font-brand: 'Caveat',
     cursive;
   --font-heading: 'Lora',
@@ -96,6 +93,207 @@ body {
 @media only screen and (max-width: 479px) {
   /*...mobile portrait styles */
 }
+
+
+
+/* ======================================================
+              Common Button Styles
+========================================================= */
+.button {
+  position: relative;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  background: transparent;
+  color: var(--clr-lighter-blue);
+  z-index: 4;
+  -webkit-backface-visibility: hidden;
+  backface-visibility:hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-general {
+  font-family: var(--font-body);
+  font-size: .9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0 .375em;
+  padding: 12px 46px 12px 46px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 4px;
+  transition: all .5s var(--cubic-timing-1);
+  z-index: 10;
+}
+
+.btn-general:focus {
+  outline: none;
+}
+
+
+
+/* Box colors */
+.bg-1 {
+  background: #ECEFF1;
+  background: var(--clr-light-blue);
+  background: transparent;
+  color: #37474f;
+  color: var(--clr-lighter-blue);
+  color: var(--clr-light-blue);
+}
+
+.bg-2 {
+  background: #7986cb;
+  color: #ECEFF1;
+}
+
+.bg-3 {
+  background: #37474f;
+  color: #fff;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+.bg-1 .button {
+  color: var(--clr-lighter-blue);
+  border-color: var(--clr-lighter-blue);
+}
+
+.bg-2 .button {
+  color: #ECEFF1;
+  border-color: #ECEFF1;
+}
+
+.bg-3 .button {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Sizes */
+.button--size-s {
+  font-size: 14px;
+}
+
+.button--size-m {
+  font-size: 16px;
+}
+
+.button--size-l {
+  font-size: 18px;
+}
+
+/* Typography and Roundness */
+.button--text-upper {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button--text-thin {
+  font-weight: 300;
+}
+
+.button--text-medium {
+  font-weight: 500;
+}
+
+.button--text-thick {
+  font-weight: 600;
+}
+
+.button--round-s {
+  border-radius: 5px;
+}
+
+.button--round-m {
+  border-radius: 15px;
+}
+
+.button--round-l {
+  border-radius: 40px;
+}
+
+/* Borders */
+.button--border-thin {
+  border: 1px solid;
+}
+
+.button--border-medium {
+  border: 2px solid;
+}
+
+.button--border-thick {
+  border: 3px solid;
+}
+
+
+/* .button--special*/
+.button--special {
+  -webkit-transition: border-color 0.4s, color 0.4s;
+  transition: border-color 0.4s, color 0.4s;
+}
+
+.button--special::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #37474f;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+  transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button--special.button--round-s::before {
+  border-radius: 2px;
+}
+
+.button--special.button--inverted::before {
+  background: #7986CB;
+}
+
+.button--special,
+.button--special::before {
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button--special:hover,
+.button--special:focus {
+  color: #fff;
+  border-color: #37474f;
+}
+
+.button--special.button--inverted:hover {
+  color: #37474F;
+  border-color: #fff;
+}
+
+.button--special:hover::before,
+.button--special:focus::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+
+
+
 
 /* ======================================================
               Preloader
@@ -283,19 +481,19 @@ body {
 /*======================================================
               pages
 =========================================================*/
-.pages {
+/* .pages {
   height: 700px;
   padding-top: var(--nav-height);
-}
+} */
 
 /* .pages:nth-child(5) {
   padding-top: 0;
   margin-top: -80px;
 } */
 
-.pages h1 {
+/* .pages h1 {
   text-align: center;
-}
+} */
 
 div#contactPage.pages {
   padding-top: var(--nav-height);
@@ -386,8 +584,8 @@ footer {
 
 }
 
-#footer a.social-icon.facebook,
-#footer a.social-icon.twitter,
+#footer a.social-icon.linkedin,
+#footer a.social-icon.codepen,
 #footer a.social-icon.github {
   margin-right: 1em;
   font-size: 1.7rem;
@@ -401,12 +599,12 @@ footer {
 
 }
 
-#footer a.social-icon.facebook:hover {
-  color: #536fac !important;
+#footer a.social-icon.linkedin:hover {
+  color: #0e76a8 !important;
 }
 
-#footer .social-icon.twitter:hover {
-  color: #58bde9 !important;
+#footer .social-icon.codepen:hover {
+  color: #b3b3b3 !important;
 }
 
 #footer .social-icon.github:hover {
@@ -503,7 +701,75 @@ footer {
 /*======================================================
               pages/AboutPage
 =========================================================*/
+#aboutPage {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 720px;
+  padding-top: 2em;
+  padding-bottom: 4em;
+}
 
+#aboutPage img {
+  margin-right: 1em;
+
+}
+
+.about-author-img {
+  padding: 5px;
+  /* background-color: #f5be1a; */
+  border-radius: 4px;
+  border: 5px solid var(--clr-accent-gold);
+  border: 5px solid var(--clr-darker-blue);
+
+}
+
+#aboutPage .about-info {
+margin-top: 1em;
+}
+#aboutPage .about-info-title {
+  text-align: center;
+}
+
+
+#aboutPage .about-info-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+#aboutPage .about-info-text {
+  font-size: var(--font-body);
+}
+
+#aboutPage .about-info-para {
+  font-size: 1rem;
+}
+
+.about-info-para {
+  /* font-weight: 800; */
+  hyphens: auto;
+}
+
+.about__info--single-link {
+  display: inline-block;
+  text-decoration: none !important;
+  padding: 0.5em 0.75em;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: var(--light-blue);
+  background-color: var(--med-blue);
+  border: 1px solid var(--med-blue);
+  margin-right: 1rem;
+  cursor: pointer;
+  box-shadow: 8px 13px 21px 3px rgba(98, 98, 98, 1);
+  box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+}
 
 /*======================================================
               pages/ContactPage
@@ -548,7 +814,7 @@ div#homePage.header.pages {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
 }
 
 #header-content--inner {
@@ -558,7 +824,6 @@ div#homePage.header.pages {
 
 #header-heading h1 {
   display: block;
-  /* color: var(--white); */
   color: var(--clr-lighter-blue);
   font-family: var(--font-heading);
   font-size: 4rem;
@@ -578,6 +843,59 @@ div#homePage.header.pages {
   letter-spacing: 3px;
   color: var(--clr-accent-gold);
   opacity: 0.8;
+}
+
+#header #header-heading--btn {
+  text-decoration: none;
+}
+
+#header #header--btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#arrow-content {
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  margin-left: -16px; 
+  width: 32px;
+  height: 32px;
+  color: var(--clr-lighter-blue);
+  color: var(--clr-light-blue);
+  font-size: 3rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -ms-transition: all 2s;
+  -o-transition: all 2s;
+
+}
+
+#arrow-down:hover,
+#arrow-down:focus {
+  color: var(--clr-light-blue);
+  cursor: pointer;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
 
 /*======================================================
