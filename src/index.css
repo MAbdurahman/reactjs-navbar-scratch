@@ -111,7 +111,7 @@ body {
   text-decoration: none;
   color: white;
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid;
   border-radius: 3px;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -124,6 +124,7 @@ body {
   outline: none;
 }
 
+/**************** btn-home button ****************/
 .btn-home {
   background-color: transparent;
   border: 2px solid white;
@@ -171,6 +172,86 @@ body {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+/**************** btn-blue button ****************/
+
+.btn-blue {
+    background-color: transparent;
+    border: 2px solid var(--clr-darker-blue);
+    border-radius: 3px;
+}
+.btn-blue:focus,
+.btn-blue:hover {
+  color: var(--clr-darker-blue);
+  border-color: var(--clr-darker-blue);
+}
+
+.btn-blue:hover {
+  color: var(--clr-lighter-blue);
+  border-color: var(--clr-lighter-blue);
+}
+
+.btn-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--clr-darker-blue);
+  border-color: var(--clr-darker-blue);
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+  transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-blue,
+.btn-blue::before {
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-blue:hover::before,
+.btn-blue:focus::before {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+
+/* ======================================================
+              Common Image Styles
+========================================================= */
+.img-responsive {
+  vertical-align: middle;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -380,10 +461,10 @@ body {
   text-align: center;
 } */
 
-div#contactPage.pages {
+/* div#contactPage.pages {
   padding-top: var(--nav-height);
 
-}
+} */
 
 /*tablet landscape and desktop layout (960px or more) */
 @media only screen and (min-width: 960px) {
@@ -394,7 +475,7 @@ div#contactPage.pages {
 @media only screen and (max-width: 1024px) {
 
   /*... tablet portrait styles */
-  div#contactPage.pages {
+  /* div#contactPage.pages {
     padding-top: 3em;
   }
 
@@ -403,7 +484,7 @@ div#contactPage.pages {
   div#portfolioPage,
   div#contactPage {
     height: 900px;
-  }
+  } */
 }
 
 /*mobile landscape layout (480px to 767px) */
@@ -594,32 +675,62 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 720px;
-  padding-top: 2em;
-  padding-bottom: 4em;
+  margin-top: 18em;
+  margin-bottom: 3em;
+
+
+  background-color: var(--clr-background);
+
+/*   margin-top: 720px; */
+  /* padding-bottom: 4em; */
 }
+
+/* #aboutPage.about-row {
+  background-color: var(--clr-background) !important;
+} */
 
 #aboutPage img {
   margin-right: 1em;
 
 }
-
+#aboutPage .about-image-outer {
+  padding: .5em;
+  border: 5px solid var(--clr-darker-blue);
+}
 .about-author-img {
   padding: 5px;
   /* background-color: #f5be1a; */
   border-radius: 4px;
   border: 5px solid var(--clr-accent-gold);
-  border: 5px solid var(--clr-darker-blue);
+  /* border: 5px solid var(--clr-darker-blue); */
 
+}
+#aboutPage img.about-author-img {
+  width: 100%;
 }
 
 #aboutPage .about-info {
   margin-top: 1em;
 }
+#aboutPage #about-img-column,
+#aboutPage #about-info-column {
+  background-color: var(--clr-lighter-blue);
+}
 
-#aboutPage .about-info-title {
+#aboutPage h1.about-info-title {
   text-align: center;
 }
+#aboutPage .about-title {
+  font-family: var(--font-heading);
+  text-align: center;
+  letter-spacing: 1px;
+}
+#aboutPage p.about-info-para {
+  margin-top: 1em;
+  letter-spacing: 1px;
+}
+
+
 
 
 #aboutPage .about-info-buttons {
@@ -644,19 +755,25 @@ footer {
 
 .about__info--single-link {
   display: inline-block;
+  width: 250px;
   text-decoration: none !important;
   padding: 0.5em 0.75em;
   font-size: 1.25rem;
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: capitalize;
-  color: var(--light-blue);
-  background-color: var(--med-blue);
-  border: 1px solid var(--med-blue);
+  color: var(--clr-darker-blue);
+  background-color: transparent;
+  border: 2px solid var(--clr-darker-blue);
   margin-right: 1rem;
   cursor: pointer;
   box-shadow: 8px 13px 21px 3px rgba(98, 98, 98, 1);
   box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
+}
+.about__info--single-link:hover,
+.about__info--single-link:focus {
+  border: 2px solid var(--clr-darker-blue);
+  color: var(--clr-lighter-blue);
 }
 
 /*======================================================

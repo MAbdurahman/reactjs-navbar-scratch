@@ -14,7 +14,7 @@ function App() {
 			<Preloader />
 			<Navbar />
 			<HomePage />
-		
+			<AboutPage />
 
 		</>
 	);
