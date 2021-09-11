@@ -3,7 +3,7 @@ import React from 'react';
 export default function HomePage() {
 	return (
 		<header id='homePage' className='header scrollspy'>
-			<div className="header_background"></div>
+			<div className='header_background img-responsive'></div>
 			<div className='header_overlay'></div>
 			<div id='header-content'>
 				<div id='header-content--inner' className='text-center'>
@@ -25,11 +25,11 @@ export default function HomePage() {
 						</a>
 					</div>
 				</div>
-					<div id='arrow-content'>
-						<a href='#aboutPage' id='arrow-down'>
-							<i className='fas fa-chevron-down'></i>
-						</a>
-					</div>
+				<div id='arrow-content'>
+					<a href='#aboutPage' id='arrow-down'>
+						<i className='fas fa-chevron-down'></i>
+					</a>
+				</div>
 			</div>
 		</header>
 	);
