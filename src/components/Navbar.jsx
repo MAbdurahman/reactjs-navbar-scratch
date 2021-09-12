@@ -40,6 +40,7 @@ export default function Navbar() {
 						className='navbar-links-link active'
 						onClick={closeMenu}
 					>
+						<i class='fas fa-home'></i>{' '}
 						Home
 					</a>
 				</li>
@@ -49,6 +50,7 @@ export default function Navbar() {
 						className='navbar-links-link'
 						onClick={closeMenu}
 					>
+						<i class='fas fa-user-tie'></i>{' '}
 						About
 					</a>
 				</li>
@@ -58,6 +60,7 @@ export default function Navbar() {
 						className='navbar-links-link'
 						onClick={closeMenu}
 					>
+						<i class='fas fa-cogs'></i>{' '}
 						Skills
 					</a>
 				</li>
@@ -67,6 +70,7 @@ export default function Navbar() {
 						className='navbar-links-link'
 						onClick={closeMenu}
 					>
+						<i class='fas fa-images'></i>{' '}
 						Portfolio
 					</a>
 				</li>
@@ -76,6 +80,7 @@ export default function Navbar() {
 						className='navbar-links-link'
 						onClick={closeMenu}
 					>
+						<i class='fas fa-envelope'></i>{' '}
 						Contact
 					</a>
 				</li>
