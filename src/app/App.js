@@ -14,8 +14,10 @@ function App() {
 			<Preloader />
 			<Navbar />
 			<HomePage />
-			<AboutPage />
-
+			<main>
+				<AboutPage />
+				<SkillsPage />
+			</main>
 		</>
 	);
 }
