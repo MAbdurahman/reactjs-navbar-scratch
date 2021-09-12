@@ -964,13 +964,14 @@ header#homePage.header::before {
 	height: 1.5625em;
 	border-radius: 0;
 	background: #a9a9a9;
+/* 	background: var(--clr-blue); */
 	overflow: visible;
 	box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
 }
 
 .progress-bar {
 	position: relative;
-	background-color: var(--med-blue);
+	background-color: var(--clr-light-blue);
 	box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
 }
 
@@ -984,8 +985,8 @@ header#homePage.header::before {
 	font-weight: 600;
 	letter-spacing: 1px;
 	font-family: var(--font-heading);
-	background: var(--med-blue);
-	color: var(--med-blue);
+	background: var(--clr-blue);
+	color: var(--clr-lighter-blue);
 }
 
 .progress-bar span::before {
@@ -993,7 +994,7 @@ header#homePage.header::before {
 	position: absolute;
 	bottom: -8px;
 	left: 5%;
-	border-top: 8px solid var(--light-blue);
+	border-top: 8px solid var(--clr-blue);
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 }
