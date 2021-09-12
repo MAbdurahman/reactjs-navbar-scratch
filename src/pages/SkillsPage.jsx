@@ -71,22 +71,7 @@ export default function SkillsPage() {
 						</div>
 					</div>
 					<div className='skill'>
-						<h4>C++</h4>
-						<div className='progress'>
-							<div
-								className='progress-bar'
-								role='progressbar'
-								aria-valuenow='65'
-								aria-valuemin='0'
-								aria-valuemax='100'
-								style={{ width: 0 + '%' }}
-							>
-								<span>65%</span>
-							</div>
-						</div>
-					</div>
-					<div className='skill'>
-						<h4>PHP</h4>
+						<h4>NodeJS</h4>
 						<div className='progress'>
 							<div
 								className='progress-bar'
@@ -101,17 +86,32 @@ export default function SkillsPage() {
 						</div>
 					</div>
 					<div className='skill'>
+						<h4>ReactJS</h4>
+						<div className='progress'>
+							<div
+								className='progress-bar'
+								role='progressbar'
+								aria-valuenow='75'
+								aria-valuemin='0'
+								aria-valuemax='100'
+								style={{ width: 0 + '%' }}
+							>
+								<span>75%</span>
+							</div>
+						</div>
+					</div>
+					<div className='skill'>
 						<h4>NoSQL</h4>
 						<div className='progress'>
 							<div
 								className='progress-bar'
 								role='progressbar'
-								aria-valuenow='87'
+								aria-valuenow='73'
 								aria-valuemin='0'
 								aria-valuemax='100'
 								style={{ width: 0 + '%' }}
 							>
-								<span>87%</span>
+								<span>73%</span>
 							</div>
 						</div>
 					</div>
