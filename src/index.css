@@ -971,7 +971,7 @@ header#homePage.header::before {
 
 .progress-bar {
 	position: relative;
-	background-color: var(--clr-light-blue);
+	background-color: var(--clr-darker-blue);
 	box-shadow: 8px 13px 32px -4px rgba(0, 0, 0, 0.5);
 }
 
@@ -985,8 +985,8 @@ header#homePage.header::before {
 	font-weight: 600;
 	letter-spacing: 1px;
 	font-family: var(--font-heading);
-	background: var(--clr-blue);
-	color: var(--clr-lighter-blue);
+	background: var(--clr-light-blue);
+	color: var(--clr-darker-blue);
 }
 
 .progress-bar span::before {
@@ -994,7 +994,7 @@ header#homePage.header::before {
 	position: absolute;
 	bottom: -8px;
 	left: 5%;
-	border-top: 8px solid var(--clr-blue);
+	border-top: 8px solid var(--clr-light-blue);
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 }
