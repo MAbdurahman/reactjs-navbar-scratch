@@ -37,11 +37,13 @@ export default function AboutPage() {
 							<p className='about-info-para'>
 								I specialize in creating beautiful, reusable, and
 								professional websites, using the best practices and the
-								latest web standardized guidelines.&nbsp;&nbsp;This
-								results in websites with semantic and SEO friendly HTML5
-								and CSS3,&nbsp;which improves the quality and quantity
-								of website traffic.&nbsp;&nbsp;
-								<strong>All my websites are customized and hand coded! </strong>
+								latest standardized guidelines.&nbsp;&nbsp;This results
+								in semantic and SEO friendly websites,&nbsp;which
+								improves the quality and quantity of your website
+								traffic.&nbsp;&nbsp;
+								<strong>
+									All my websites are customized and hand coded!{' '}
+								</strong>
 							</p>
 							<p className='about-info-para'>
 								When I am not writing code, I continue to investigate,

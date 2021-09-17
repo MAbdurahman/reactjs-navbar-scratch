@@ -70,6 +70,9 @@ body {
 	background-color: var(--clr-lighter-blue);
 	overflow-x: hidden;
 }
+main {
+	position: relative;
+}
 
 /*tablet landscape and desktop layout (960px or more) */
 @media only screen and (min-width: 960px) {
@@ -678,7 +681,7 @@ header#homePage.header {
 	bottom: 0;
 	height: 100vh;
 	width: 100vw;
-	margin-left: -5em;
+	/* margin-left: -5em; */
 	margin-bottom: 3em;
 	background-image: url('./img/home_page/pexels-pixabay-270348.jpg');
 	background-size: cover;
@@ -815,6 +818,7 @@ header#homePage.header::before {
 	top: 0;
 	left: 0;
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
